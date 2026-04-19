@@ -1,0 +1,17 @@
+config:
+  target: "http://localhost:4000"
+  phases:
+    - duration: 20
+      arrivalRate: 10
+      name: warmup
+    - duration: 20
+      arrivalRate: 10
+      rampTo: 50
+      name: ramp
+scenarios:
+  - name: get-tasks-burst
+    flow:
+      - loop:
+          - get:
+              url: "/tasks"
+        count: 4

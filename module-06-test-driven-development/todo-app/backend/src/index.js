@@ -10,11 +10,20 @@ app.use(express.json());
 
 const tasks = [];
 
+const resetTasks = () => {
+  tasks.length = 0;
+};
+
 const validateTaskPayload = (payload) => {
   if (!payload || typeof payload.title !== 'string' || !payload.title.trim()) {
     return 'Task title is required.';
   }
   return null;
+};
+
+const toggleTaskCompletion = (task) => {
+  task.completed = !task.completed;
+  return task;
 };
 
 app.get('/tasks', (req, res) => {
@@ -47,8 +56,7 @@ app.patch('/tasks/:id/complete', (req, res) => {
     return res.status(404).json({ error: 'Task not found.' });
   }
 
-  task.completed = !task.completed;
-  res.json(task);
+  res.json(toggleTaskCompletion(task));
 });
 
 app.use((err, req, res, next) => {
@@ -56,6 +64,15 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'An unexpected error occurred.' });
 });
 
-app.listen(PORT, () => {
-  console.log(`ToDo backend listening on http://localhost:${PORT}`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`ToDo backend listening on http://localhost:${PORT}`);
+  });
+}
+
+module.exports = {
+  app,
+  validateTaskPayload,
+  toggleTaskCompletion,
+  resetTasks
+};

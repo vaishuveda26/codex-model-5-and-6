@@ -5,7 +5,17 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "test": "npm run test:all",
+    "test:all": "node tests/run-all.js",
+    "test:unit": "node tests/unit.validate.js",
+    "test:integration": "node tests/integration.api.js",
+    "test:smoke": "node tests/smoke.api.js",
+    "test:api": "node tests/api.contract.js",
+    "test:security": "node tests/security.fuzz.js",
+    "test:performance": "node tests/performance.basic.js",
+    "test:acceptance": "node tests/acceptance.flow.js",
+    "test:regression": "node tests/regression.pack.js"
   },
   "engines": {
     "node": ">=16"

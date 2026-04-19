@@ -26,7 +26,7 @@ Parallel-execution/
 ## Run The Backend
 
 ```bash
-cd "Module 5 and 6/Parallel-execution/backend"
+cd "Module-5-and-6/Parallel-execution/backend"
 npm install
 npm start
 ```
@@ -52,7 +52,7 @@ Example request body:
 Open a second terminal:
 
 ```bash
-cd "Module 5 and 6/Parallel-execution/frontend"
+cd "Module-5-and-6/Parallel-execution/frontend"
 npm install
 npm run dev
 ```

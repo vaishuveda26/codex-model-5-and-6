@@ -1,0 +1,54 @@
+Sequence,RunAt,Script,Category,Suite,Scenario,TestCaseStatus,ExitCode,DurationMs
+1,2026-04-19T09:56:33.736Z,unit.validate.js,Unit,Unit - Payload Validation,validateTaskPayload accepts valid title,PASS,0,0
+2,2026-04-19T09:56:33.736Z,unit.validate.js,Unit,Unit - Payload Validation,validateTaskPayload rejects missing title,PASS,0,0
+3,2026-04-19T09:56:33.736Z,unit.validate.js,Unit,Unit - Payload Validation,validateTaskPayload rejects whitespace-only title,PASS,0,0
+4,2026-04-19T09:56:33.736Z,integration.api.js,Integration,Integration - API Routes,POST /tasks then GET /tasks returns created task,PASS,0,0
+5,2026-04-19T09:56:33.736Z,integration.api.js,Integration,Integration - API Routes,PATCH /tasks/:id/complete toggles task,PASS,0,0
+6,2026-04-19T09:56:33.736Z,integration.api.js,Integration,Integration - API Routes,PATCH /tasks/:id/complete returns 404 for missing ID,PASS,0,0
+7,2026-04-19T09:56:33.736Z,smoke.api.js,Smoke,Smoke - Service Health,GET /tasks returns 200 and array,PASS,0,0
+8,2026-04-19T09:56:33.736Z,smoke.api.js,Smoke,Smoke - Service Health,POST /tasks with valid title returns 201,PASS,0,0
+9,2026-04-19T09:56:33.736Z,smoke.api.js,Smoke,Smoke - Service Health,PATCH /tasks/:id/complete works for saved task,PASS,0,0
+10,2026-04-19T09:56:33.736Z,api.contract.js,API Contract,API Contract - Endpoint Behavior,GET /tasks returns JSON array,PASS,0,0
+11,2026-04-19T09:56:33.736Z,api.contract.js,API Contract,API Contract - Endpoint Behavior,POST /tasks requires title,PASS,0,0
+12,2026-04-19T09:56:33.736Z,api.contract.js,API Contract,API Contract - Endpoint Behavior,POST /tasks returns required schema fields,PASS,0,0
+13,2026-04-19T09:56:33.736Z,api.contract.js,API Contract,API Contract - Endpoint Behavior,PATCH /tasks/:id/complete returns 404 for unknown ID,PASS,0,0
+14,2026-04-19T09:56:33.736Z,security.fuzz.js,Security,Security - Fuzz and Headers,Script-like title payload is handled safely,PASS,0,0
+15,2026-04-19T09:56:33.736Z,security.fuzz.js,Security,Security - Fuzz and Headers,Very long title payload does not crash API,PASS,0,0
+16,2026-04-19T09:56:33.736Z,security.fuzz.js,Security,Security - Fuzz and Headers,CORS header is returned for GET /tasks,PASS,0,0
+17,2026-04-19T09:56:33.736Z,performance.basic.js,Performance,Performance - Baseline Throughput,POST /tasks baseline p95 latency under 250ms for 50 requests,PASS,0,0
+18,2026-04-19T09:56:33.736Z,performance.basic.js,Performance,Performance - Baseline Throughput,GET /tasks median latency under 150ms for 200 requests,PASS,0,0
+19,2026-04-19T09:56:33.736Z,acceptance.flow.js,Acceptance,Acceptance - Business Flow,User can add a task and see it in backend list,PASS,0,0
+20,2026-04-19T09:56:33.736Z,acceptance.flow.js,Acceptance,Acceptance - Business Flow,User can mark task complete and then undo,PASS,0,0
+21,2026-04-19T09:56:33.736Z,regression.pack.js,Unit,Unit - Payload Validation,validateTaskPayload accepts valid title,PASS,0,0
+22,2026-04-19T09:56:33.736Z,regression.pack.js,Unit,Unit - Payload Validation,validateTaskPayload rejects missing title,PASS,0,0
+23,2026-04-19T09:56:33.736Z,regression.pack.js,Unit,Unit - Payload Validation,validateTaskPayload rejects whitespace-only title,PASS,0,0
+24,2026-04-19T09:56:33.736Z,regression.pack.js,Integration,Integration - API Routes,POST /tasks then GET /tasks returns created task,PASS,0,0
+25,2026-04-19T09:56:33.736Z,regression.pack.js,Integration,Integration - API Routes,PATCH /tasks/:id/complete toggles task,PASS,0,0
+26,2026-04-19T09:56:33.736Z,regression.pack.js,Integration,Integration - API Routes,PATCH /tasks/:id/complete returns 404 for missing ID,PASS,0,0
+27,2026-04-19T09:56:33.736Z,regression.pack.js,Smoke,Smoke - Service Health,GET /tasks returns 200 and array,PASS,0,0
+28,2026-04-19T09:56:33.736Z,regression.pack.js,Smoke,Smoke - Service Health,POST /tasks with valid title returns 201,PASS,0,0
+29,2026-04-19T09:56:33.736Z,regression.pack.js,Smoke,Smoke - Service Health,PATCH /tasks/:id/complete works for saved task,PASS,0,0
+30,2026-04-19T09:56:33.736Z,regression.pack.js,API Contract,API Contract - Endpoint Behavior,GET /tasks returns JSON array,PASS,0,0
+31,2026-04-19T09:56:33.736Z,regression.pack.js,API Contract,API Contract - Endpoint Behavior,POST /tasks requires title,PASS,0,0
+32,2026-04-19T09:56:33.736Z,regression.pack.js,API Contract,API Contract - Endpoint Behavior,POST /tasks returns required schema fields,PASS,0,0
+33,2026-04-19T09:56:33.736Z,regression.pack.js,API Contract,API Contract - Endpoint Behavior,PATCH /tasks/:id/complete returns 404 for unknown ID,PASS,0,0
+34,2026-04-19T09:56:33.736Z,run-all.js,Unit,Unit - Payload Validation,validateTaskPayload accepts valid title,PASS,0,0
+35,2026-04-19T09:56:33.736Z,run-all.js,Unit,Unit - Payload Validation,validateTaskPayload rejects missing title,PASS,0,0
+36,2026-04-19T09:56:33.736Z,run-all.js,Unit,Unit - Payload Validation,validateTaskPayload rejects whitespace-only title,PASS,0,0
+37,2026-04-19T09:56:33.736Z,run-all.js,Integration,Integration - API Routes,POST /tasks then GET /tasks returns created task,PASS,0,0
+38,2026-04-19T09:56:33.736Z,run-all.js,Integration,Integration - API Routes,PATCH /tasks/:id/complete toggles task,PASS,0,0
+39,2026-04-19T09:56:33.736Z,run-all.js,Integration,Integration - API Routes,PATCH /tasks/:id/complete returns 404 for missing ID,PASS,0,0
+40,2026-04-19T09:56:33.736Z,run-all.js,Smoke,Smoke - Service Health,GET /tasks returns 200 and array,PASS,0,0
+41,2026-04-19T09:56:33.736Z,run-all.js,Smoke,Smoke - Service Health,POST /tasks with valid title returns 201,PASS,0,0
+42,2026-04-19T09:56:33.736Z,run-all.js,Smoke,Smoke - Service Health,PATCH /tasks/:id/complete works for saved task,PASS,0,0
+43,2026-04-19T09:56:33.736Z,run-all.js,API Contract,API Contract - Endpoint Behavior,GET /tasks returns JSON array,PASS,0,0
+44,2026-04-19T09:56:33.736Z,run-all.js,API Contract,API Contract - Endpoint Behavior,POST /tasks requires title,PASS,0,0
+45,2026-04-19T09:56:33.736Z,run-all.js,API Contract,API Contract - Endpoint Behavior,POST /tasks returns required schema fields,PASS,0,0
+46,2026-04-19T09:56:33.736Z,run-all.js,API Contract,API Contract - Endpoint Behavior,PATCH /tasks/:id/complete returns 404 for unknown ID,PASS,0,0
+47,2026-04-19T09:56:33.736Z,run-all.js,Security,Security - Fuzz and Headers,Script-like title payload is handled safely,PASS,0,0
+48,2026-04-19T09:56:33.736Z,run-all.js,Security,Security - Fuzz and Headers,Very long title payload does not crash API,PASS,0,0
+49,2026-04-19T09:56:33.736Z,run-all.js,Security,Security - Fuzz and Headers,CORS header is returned for GET /tasks,PASS,0,0
+50,2026-04-19T09:56:33.736Z,run-all.js,Performance,Performance - Baseline Throughput,POST /tasks baseline p95 latency under 250ms for 50 requests,PASS,0,0
+51,2026-04-19T09:56:33.736Z,run-all.js,Performance,Performance - Baseline Throughput,GET /tasks median latency under 150ms for 200 requests,PASS,0,0
+52,2026-04-19T09:56:33.736Z,run-all.js,Acceptance,Acceptance - Business Flow,User can add a task and see it in backend list,PASS,0,0
+53,2026-04-19T09:56:33.736Z,run-all.js,Acceptance,Acceptance - Business Flow,User can mark task complete and then undo,PASS,0,0
